@@ -20,14 +20,12 @@ sudo systemctl enable sddm
 
 git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 sudo cp $HOME/neovim_conf/init.lua $HOME/.config/nvim
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl -sS https://webi.sh/golang | sh; source ~/.config/envman/PATH.env
+go install github.com/bootdotdev/bootdev@latest
 curl -sS https://webi.sh/gh | sh; source ~/.config/envman/PATH.env
 
-curl -sS https://webi.sh/golang | sh; source ~/.config/envman/PATH.env
-
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sudo cp $HOME/neovim_conf/.zshcr $HOME/
 chsh -s $(which zsh)
-
-go install github.com/bootdotdev/bootdev@latest
