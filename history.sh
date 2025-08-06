@@ -17,3 +17,5 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 sudo pacman -S hyprland ghostty swaync xdg-desktop-portal-hyprland hyprpolkitagent qt5-wayland qt6-wayland hyprpaper xclip sddm rofi-wayland unzip make ripgrep fd neovim --needed --noconfirm
 yay -S xwaylandvideobridge --needed --noconfirm
 sudo systemctl enable sddm
+
+git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
