@@ -41,5 +41,5 @@ curl -sS https://webi.sh/gh | sh; source ~/.config/envman/PATH.env
 
 echo "Installing Oh my zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-sudo cp $HOME/neovim_conf/.zshcr $HOME/
+sudo cp $HOME/neovim_conf/.zshcr $HOME/zshrc
 chsh -s $(which zsh)
