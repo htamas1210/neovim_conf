@@ -39,6 +39,14 @@ curl -sS https://webi.sh/golang | sh; source ~/.config/envman/PATH.env
 go install github.com/bootdotdev/bootdev@latest
 curl -sS https://webi.sh/gh | sh; source ~/.config/envman/PATH.env
 
+
+#hyprpaper and conf
+mkdir -p $HOME/Pictures/Wallpaper/ 
+git clone https://github.com/htamas1210/Wallpapers.git $HOME/Pictures/Wallpaper/
+printf "splash = true\nipc = on" > $HOME/.config/hypr/hyprpaper.conf 
+
+
+
 echo "Installing Oh my zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sudo cp $HOME/neovim_conf/.zshcr $HOME/zshrc
